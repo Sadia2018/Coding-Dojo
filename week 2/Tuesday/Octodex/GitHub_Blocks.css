@@ -1,0 +1,44 @@
+
+h1 {
+    text-align: center;
+    font-family: fantasy;
+    font-weight: bold;
+    text-decoration:underline;
+}
+.container {
+    width: 800px;
+    height: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    background-color: skyblue;
+}
+img {
+    height: 200px;
+    margin: 15px;
+}
+
+#blue {
+    background-color: lightyellow;
+    margin-top: 15px;
+
+}
+
+#pink {
+    background-color: olivedrab;
+    margin-top: 15px;
+    /* padding-right: 236px; */
+    display: flex;
+    justify-content: space-around;
+}
+#teal {
+    background-color: peru;
+    margin: 15px 0;
+
+}
+.row {
+    border: 1px solid black;
+    width: 90%;
+}

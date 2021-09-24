@@ -1,0 +1,32 @@
+body {
+    background-color: blanchedalmond;
+    font-family: cursive;
+}
+header {
+    background-color: black;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    padding: 7px;
+}
+span {
+      color: turquoise;
+}
+.projects {
+    text-align:center;
+    color: white;
+    background-color: rebeccapurple;
+    font-size: 24px;
+    font-style: italic;
+    padding: 10px;
+    margin: 5px 0;
+}
+.info {
+    text-align: right;
+    text-decoration: underline;
+    background-color: turquoise;
+    color: rebeccapurple;
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 20px;
+}

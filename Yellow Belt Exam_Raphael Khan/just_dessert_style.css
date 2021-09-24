@@ -1,0 +1,126 @@
+body {
+    margin: 0px auto;
+    width: 960px;
+    font-family:cursive;
+}
+header {
+    height:50px;
+    background-color:#696969;
+    padding:10px;
+}
+h1 {
+    color: ghostwhite;
+}
+#span_header {
+    color: orange;
+}
+.flexHeader {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+button {
+    margin: 5px;
+    font-family: cursive;
+    box-shadow: 2px 2px 2px 2px black;
+    width: 60px;
+    margin: 7px;
+}
+#joinBtn{
+    background-color: orange;
+    color: black;
+}
+#loginBtn{
+    background-color: cornflowerblue;
+    color: ghostwhite;
+}
+.images_1 {
+    width: 70px;
+}
+.heart_imgs {
+    width: 30px;
+}
+#tart_img {
+    width: 90%;
+    margin: 5px 0px 5px 0px;
+}
+#macaron_img {
+    width: 90%;
+}
+#bowl_img {
+    width: 90%;
+}
+#flexMain_1 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color:#FFDAB9;
+    height: 125px;
+}
+.align_divs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#goBtn {
+    font-family: cursive;
+    color: ghostwhite;
+    background-color: cornflowerblue;
+    box-shadow: 2px 2px 2px 2px black;
+}
+#searchBar {
+    height: 19px;
+    box-shadow: 2px 2px 2px 2px black;
+}
+.top_margin {
+    margin-top: 0px;
+}
+#main_container {
+    display: flex;
+    justify-content: space-between;
+}
+#container_1{
+    width: 60%;
+    height: 620px;
+    background-color:#F0F8FF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 16px;
+}
+#container_2 {
+    width: 35%;
+}
+.flex_hearts {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    width: 90%;
+    height: 30px;
+    margin-left: 20px;
+}
+.flex_author {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    height: 30px;
+    margin-left: 20px;
+}
+h2 {
+    color: cornflowerblue;
+    font-weight: bold;
+}
+a {
+    color: cornflowerblue;
+}
+p {
+    font-weight: bold;
+}
+hr {
+    height: 2px;
+    background-color: black;
+    border-radius: 40%;
+}
+.align_content {
+    text-align: center;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Clicker</title>
+    <link rel="stylesheet" href="./button_clicker_style.css">
+    <script src="./button_clicker.js" defer></script>
+</head>
+<body>
+    <div>
+        <nav class="nav-links">
+            <h1>Dojonary</h1>
+            <input type="text" placeholder="Search..">
+            <button class="btn" id="btn-change" onclick="logOut(this)">LOGIN</button>
+        </nav>
+        <main>
+            <div class="container-1">
+                <div class="sub-container">
+                    <div class="sub-container1">
+                        <h2>ninja</h2>
+                        <h3>noun</h3>
+                        <h4>Plural:<span class="italics"> ninjas</span></h4>
+                        <button class="btn-2" onclick="popUp(this)">13 likes</button>
+                    </div>
+                    <div class="special-paragraph">
+                    <p>A practitioner skilled in the <a href="#">japanese</a>art of <a href="#">ninjutsu</a></p>
+                    </div>
+                </div>
+                <div class="sub-container">
+                    <div class="sub-container1">
+                        <h2>ninja</h2>
+                        <h3>noun</h3>
+                        <h4>Plural:<span class="italics"> ninjas</span></h4>
+                        <button class="btn-2">37 likes</button>
+                    </div>
+                    <div class="special-paragraph">
+                    <p>A practitioner skilled in the <a href="#">japanese</a>art of <a href="#">ninjutsu</a></p>
+                    </div>
+                </div> 
+            </div>
+            <div class="container-2">
+                <div>
+                    <h2>Dojonary is defined by YOU</h2>
+                    <button class="btn-3" onclick="vanish(this)">Add Definition</button>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

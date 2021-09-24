@@ -1,0 +1,43 @@
+body {
+margin: 15px;
+}
+.nav {
+    height: 50px;
+    background-color:darkgrey;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    color: ghostwhite;
+    font-family: cursive;
+    text-decoration: none;
+}
+.nav-links {
+    width: 100%;
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    list-style-type:none;
+    font-weight: lighter;
+    
+}
+h1 {
+    padding: 10px;
+    margin: 5px;
+    font-weight: lighter;
+}
+li {
+    padding: 15px;
+}
+.active {
+    font-weight: bold;
+}
+a {
+    text-decoration: none;
+    color: ghostwhite;
+}
+.btn {
+    color: ghostwhite;
+    font-family: cursive;
+    background-color: lightskyblue;
+    box-shadow: 2px 2px black;
+}

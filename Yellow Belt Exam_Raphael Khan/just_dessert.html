@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Just Dessert</title>
+    <link rel="stylesheet" href="./just_dessert_style.css">
+    <script src="./just_dessert.js" defer></script>
+</head>
+<body>
+    <header class="flexHeader">
+        <div>
+            <h1>Just<span id="span_header">Dessert</span></h1>
+        </div>
+        <div class="flexHeader">
+            <button id="joinBtn" onclick="remove(this)">Join</button>
+            <button id="loginBtn">Login</button>
+        </div>
+    </header>
+    <main>
+        <div id="flexMain_1">
+            <div>
+                <input type="text" value="SEARCH" id="searchBar">
+                <input onclick="search(event)" type="submit" value="GO" id="goBtn">
+            </div>
+            <div class="align_divs">
+                <img src="./Assets/cake.png" alt="cake slice" class="images_1">
+                <h4 class="top_margin">Cakes</h4>
+            </div>
+            <div class="align_divs">
+                <img src="./Assets/cookie.png" alt="cookies image" class="images_1">
+                <h4 class="top_margin">Cookies</h4>
+            </div>
+            <div class="align_divs">
+                <img src="./Assets/ice-cream.png" alt="ice-cream image" class="images_1">
+                <h4 class="top_margin">Ice Cream</h4>
+            </div>
+            <div class="align_divs">
+                <img src="./Assets/pie.png" alt="pie image" class="images_1">
+                <h4 class="top_margin">Pies</h4>
+            </div>
+        </div>
+        <div id="main_container">
+            <div id="container_1">
+                <h2>Recipe of the Day</h2>
+                <img id="tart_img" src="./Assets/orange-tart.jpg" alt="orange tart image">
+                <div class="flex_hearts">
+                    <div>
+                        <h4>Orange Tea Jelly Tart</h4>
+                    </div>
+                    <div>
+                        <img onclick="like1()" style="cursor: pointer" class="heart_imgs" src="./Assets/heart.png" alt="like heart image"><span id="moreLikes">68</span>
+                    </div>
+                </div>
+                <div class="flex_author">
+                    <h4>by:</h4><a href="#">yuripiano</a>
+                </div>
+                <br>
+                <a href="#">See Full Recipe</a>
+            </div>
+            <div id="container_2">
+                <p>Recommended for you:</p>
+                <hr>
+                <div class="align_content">
+                    <img id="macaron_img" src="./Assets/macarons.jpg" alt="tasty macarons">
+                    <div class="flex_hearts">
+                        <div>
+                            <h4>Macarons</h4>
+                        </div>
+                        <div>
+                            <img onclick="like2()" style="cursor: pointer" class="heart_imgs" src="./Assets/heart.png" alt="like heart image"><span id="macarons_like">212</span>
+                        </div>
+                    </div>
+                    <div class="flex_author">
+                        <h4>by:</h4><a href="#">EmilieW</a>
+                    </div>
+                </div>
+                <br>
+                <div class="align_content">
+                    <img id="bowl_img" src="./Assets/creme-brulee.jpg" alt="tart bowl">
+                    <div class="flex_hearts">
+                        <div>
+                            <h4>Cre&#768;me Bru&#770;le&#769;e</h4>
+                        </div>
+                        <div>
+                            <img onclick="like3()" style="cursor: pointer" class="heart_imgs" src="./Assets/heart.png" alt="like heart image"><span id="creme_brule_like">33</span>
+                        </div>
+                    </div>
+                    <div class="flex_author">
+                        <h4>by:</h4><a href="#">MarisaG</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

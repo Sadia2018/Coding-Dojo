@@ -1,0 +1,16 @@
+.container {
+    width: 720px;
+    height: 250px;
+    background-color: silver;
+    display: flex;
+    align-items: flex-start
+    /* align-items: center; */
+    /* /* display:inline-block */
+}
+.col {
+    width: 220px;
+    padding: 10px;
+    background-color: blanchedalmond;
+    /* display: inline-block; */
+}
+

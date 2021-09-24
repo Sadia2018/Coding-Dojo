@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <h1>Registration Form</h1>
+
+    <div>
+        <label>First Name: *</label>
+        <input type="text" required name="First Name" >
+    </div>
+
+    <div>
+        <label>Last Name: *</label>
+        <input type="text" name="Last name" required>
+    </div>
+
+    <div>
+        <label>Email Address: *</label>
+        <input type="email" name="Email Address" required>
+    </div>
+
+    <div>
+        <label>Password: *</label>
+        <input type="password" required name="Password">
+    </div>
+
+    <div>
+        <label>Confirm Password: *</label>
+        <input type="password" required name="Confirm Password">
+    </div>
+
+    <div>
+        <label>Birthday</label>
+        <input type="date" name="Birthday">
+    </div>
+
+    <div>
+        <label>Gender Identity:</label><br>
+        <input type="radio" value="Male" name="Gender Identity">
+        <label>Male</label>
+        <input type="radio" value="Female" name="Gender Identity">
+        <label>Female</label>
+        <input type="radio" value="Non Binary" name="Gender Identity">
+        <label>Non Binary</label>
+        <input type="radio" value="I prefer not to answer" name="Gender Identity">
+        <label>I prefer not to answer</label>
+    </div>
+
+    <div>
+        <label> A short description about myself:</label><br>
+        <textarea cols="50" rows="7" name="comment"></textarea>
+    </div>
+
+    <div>
+        <label>Favorite Language:</label>
+        <select name="Favorite Language">
+            <option>English</option>
+            <option>Spanish</option>
+            <option>German</option>
+        </select>
+    </div>
+
+    <div>
+        <input type="checkbox" name="accept">
+        <label>Yes, I would like to receive periodic email updates</label>
+    </div>
+    
+    <div>
+        <input type="button" value="Create Account" name="new account">
+    </div>
+
+    <p>* Indicates a required field</p>
+</body>
+</html>

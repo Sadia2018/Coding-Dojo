@@ -1,0 +1,26 @@
+body {
+    margin: 0px auto;
+    width: 960px;
+}
+main {
+    margin-top: 50px;
+    width: 500px;
+    border: 2px solid black;
+    padding: 15px;
+    font-family:cursive;
+}
+.row {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+button {
+    box-shadow: 1px 1px 1px black;
+    font-family: cursive;
+    color:black;
+    background-color: yellow;
+}
+h3 {
+    margin: 20px;
+}
