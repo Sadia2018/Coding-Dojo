@@ -8,18 +8,23 @@ for i in range(5,1000,5):
 
 # # integers 1 - 100. Print "coding" if /5. Print "coding dojo" if /10
 
-for y in range(1,100):
-    if y % 5 == 0:
-        print(y,"coding")
-    elif y % 10 == 0:
-        print(y,"dojo")
+for i in range(1,100):
+    if i % 10 == 0:
+        print("coding")
+    elif i % 5 == 0:
+        print("dojo")
+    else:
+        print(i)
 
 # add odd integers. print final sum
+def addOdd():
+    sum = 0
+    for i in range(0,500000):
+        if i % 2 != 0:
+            sum += i
+    return sum
+print(addOdd())
 
-for i in range(0,500000):
-    if i % 2 != 0:
-        x = i 
-        sum(x)
 
 # positive numbers. countdown from 2018 by 4. 
 
