@@ -33,7 +33,8 @@ students = [
 
 def interateDictionary(list):
     for i in range(len(list)):
-        print(list[i])
+        for key,value in list[i].items():
+            print(key,"-",value)
 print(interateDictionary(students))
 
 # function interateDictionary 2 - key
