@@ -19,4 +19,3 @@ class bank_account:
     def yield_interest(self, interest_rate):
         if self.balance > 0:
             self.balance = self.balance*interest_rate
-    
