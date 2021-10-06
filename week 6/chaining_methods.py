@@ -26,16 +26,16 @@ class User:
 raphael = User('rapahel', 'hello@email.com')
 raphael.make_deposit(500).make_deposit(500).withdrawl(100)
 raphael.display_user_balance()
-# print(raphael.account_balance)
+print(raphael.account_balance)
 
-# jenny = User('jenny', 'itsmejen@email.com')
-# jenny.make_deposit(100)
-# print(raphael.account_balance)
-# print(jenny.account_balance)
+jenny = User('jenny', 'itsmejen@email.com')
+jenny.make_deposit(100)
+print(raphael.account_balance)
+print(jenny.account_balance)
 
-# jenny.transfer_money(raphael,25)
-# print(raphael.account_balance)
-# print(jenny.account_balance)
+jenny.transfer_money(raphael,25)
+print(raphael.account_balance)
+print(jenny.account_balance)
 
 
 
