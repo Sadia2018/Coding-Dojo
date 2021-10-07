@@ -37,10 +37,11 @@ class bank_account:
 
 checking_account = bank_account(0.03)
 investment_account = bank_account(0.05)
+retirement_account = bank_account(0.03)
 
 bank_account.all_instances()
 
 
-# checking_account.deposit(1000).deposit(1000).deposit(1000).withdraw(50).yield_interest(0.03).display_account_info()
+checking_account.deposit(1000).deposit(1000).deposit(1000).withdraw(50).yield_interest(0.03).display_account_info()
 
-# investment_account.deposit(1000).withdraw(1000).withdraw(1000)
+investment_account.deposit(1000).withdraw(1000).withdraw(1000)
