@@ -1,0 +1,26 @@
+body {
+    text-align: center;
+}
+h1 {
+    font-family:fantasy;
+    font-weight: bold;
+    color: crimson;
+}
+#checker-board {
+    margin: auto;
+    width: 400px;
+    height: 400px;
+    border: 10px solid mediumspringgreen;
+}
+.red-box {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    float:left;
+}
+.black-box {
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    float:left;
+}
