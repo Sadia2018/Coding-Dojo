@@ -7,17 +7,11 @@
     <title>Counter</title>
 </head>
 <body style="text-align: center;">
-    <!-- <h2>Counter</h2>
-    <form action='/count'method='post'>
-        <label for="counter"> {{ x }} Times</label><br>
-        <input type="submit" value="submit">
-        <input type="reset" value="reset"> -->
-        {% if counter in session 
-                session['counter'] = session.get('counter') + 1
-            else:
-                session['counter'] = 1 
-            return:"Total Visits: {}" .format(session.get('counter')) %}
-        {% endif %}
-    </form>
+    <h1>Counter</h1>
+    <h3> {{Counter}} times</h3>
+    <div>
+        <button>CLICK</button>
+        <button>RESET</button>
+    </div>
 </body>
 </html>
