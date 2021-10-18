@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+<body style="text-align: center;">
+    <!-- <h2>Counter</h2>
+    <form action='/count'method='post'>
+        <label for="counter"> {{ x }} Times</label><br>
+        <input type="submit" value="submit">
+        <input type="reset" value="reset"> -->
+        {% if counter in session 
+                session['counter'] = session.get('counter') + 1
+            else:
+                session['counter'] = 1 
+            return:"Total Visits: {}" .format(session.get('counter')) %}
+        {% endif %}
+    </form>
+</body>
+</html>
