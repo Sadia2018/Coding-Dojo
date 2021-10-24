@@ -1,0 +1,23 @@
+insert into authors ( name, created_at, updated_at)
+values ('Jane Austen', now(), now());
+insert into authors ( name, created_at, updated_at)
+values ('Emily Dickinson', now(), now());
+insert into authors ( name, created_at, updated_at)
+values ('Fyodor Dostoevsky', now(), now());
+insert into books(title, num_of_pages, created_at, updated_at)
+values ('python', '100', now(), now());
+insert into books(title, num_of_pages, created_at, updated_at)
+values ('java', '100', now(), now());
+insert into books(title, num_of_pages, created_at, updated_at)
+values ('c#', '100', now(), now());
+update books set title = 'c sharp'
+where books.id = 3;
+insert into favorites( author_id, book_id)
+values ( 1 , 1), (1 , 2);
+insert into favorites( author_id, book_id)
+values ( 2 , 1), (2 , 2), (2 , 3);
+select authors.name
+from authors
+join favorites on authors.id = author_id
+where book_id = 3;
+select * from favorites;

@@ -1,0 +1,6 @@
+update tweets set tweet = 'i am so damn cool' , user_id = '4'
+where id = 13; 
+select * from tweets;
+delete from tweets where id = 13; 
+select * from tweets; 
+

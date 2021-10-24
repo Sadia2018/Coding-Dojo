@@ -1,0 +1,27 @@
+insert into dojos ( name, created_at, updated_at)
+values ('the best dojo', now(), now());
+insert into dojos (name, created_at, updated_at)
+values ('ninja turtles', now(), now());
+insert into dojos (name, created_at, updated_at)
+values ('the third best dojo', now(), now());
+select * from dojos; 
+delete from dojos
+where id = 3;
+insert into ninjas (first_name, last_name, age, created_by, updated_by, dojos_id)
+values ('raphael', 'ninja','20', now(), now(), 1);
+insert into ninjas (first_name, last_name, age, created_by, updated_by, dojos_id)
+values ('michaelanglo', 'ninja','20', now(), now(), 1);
+insert into ninjas (first_name, last_name, age, created_by, updated_by, dojos_id)
+values ('thomas', 'ninja','20', now(), now(), 1);
+insert into ninjas (first_name, last_name, age, created_by, updated_by, dojos_id)
+values ('jenny', 'ninja','20', now(), now(), 4);
+insert into ninjas (first_name, last_name, age, created_by, updated_by, dojos_id)
+values ('kungfu', 'ninja','20', now(), now(), 4);
+select * from ninjas 
+where dojos_id = 5;
+select * from dojos;
+select dojos.name
+from dojos
+join ninjas on dojos.id = dojos_id
+where ninjas.id = 5;
+

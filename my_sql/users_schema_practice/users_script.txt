@@ -1,0 +1,15 @@
+select * from users;
+insert into users ( first_name, last_name, email, created_at, updated_at)
+values ('john', 'doe', 'jd@email.com', now(), now());
+select * from users
+where email = 'rk@email.com';
+select * from users
+where idusers = '3';
+update users set last_name = 'pancakes'
+where idusers = 3;
+select * from users;
+delete from users where idusers = 2; 
+select * from users;-- 
+select * from users
+order by first_name; 
+
