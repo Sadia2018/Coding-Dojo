@@ -1,0 +1,8 @@
+<h1>All my Friends</h1>
+{% for one_friend in all_friends %}
+    <p>First Name: {{ one_friend.first_name }}</p>
+    <p>Last Name: {{ one_friend.last_name }}</p>
+    <p>Occupation: {{ one_friend.occupation }}</p>
+    <p>Sign up date: {{ one_friend.created_at }}</p>
+    <hr>
+{% endfor %}
