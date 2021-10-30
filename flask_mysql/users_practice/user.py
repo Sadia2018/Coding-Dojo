@@ -25,3 +25,19 @@ class User:
     def save(cls, data):
         query = "INSERT INTO users (first_name, last_name, email, created_at) VALUES ( %(fname)s, %(lname)s, %(email)s, NOW());"
         return connectToMySQL('users_schema').query_db(query, data)
+#user class method to show an object in our database. 
+    @classmethod
+    def show_info(cls, data):
+        query = "SELECT * FROM users WHERE id = %(id)s;"
+        results = connectToMySQL('users_schema').query_db(query,data)
+        return cls(results[0])
+#user class method to update info for an object in our database. 
+    @classmethod
+    def update_info(cls, data):
+        query = "UPDATE users SET first_name = %(fname)s,last_name = %(lname)s,email =  %(email)s WHERE id = %(id)s"
+        return connectToMySQL('users_schema').query_db(query,data)
+# user class method to delete from database
+    @classmethod
+    def delete_info(cls, data):
+        query = "DELETE FROM users WHERE id = %(id)s;"
+        return connectToMySQL('users_schema').query_db(query, data)

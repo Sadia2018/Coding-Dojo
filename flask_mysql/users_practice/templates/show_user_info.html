@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Read(one)</title>
+</head>
+<body>
+    <h1> USER {{ user_info.id }}</h1>
+    <br>
+    Full Name : {{ user_info.first_name}} {{ user_info.last_name}}
+    <br>
+    Email : {{ user_info.email }}
+    <br>
+    Created on : {{ user_info.created_at }}
+    <br>
+    Last Updated On: {{ user_info.updated_at }}
+    <br>
+    <br>
+    <a href="/users/{{user_info.id}}/edit">EDIT</a>
+</body>
+</html>
