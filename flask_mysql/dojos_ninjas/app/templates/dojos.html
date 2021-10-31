@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOJOS</title>
+</head>
+<body>
+    <h1>All Dojos</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Dojo Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for one_dojo in all_dojos %}
+            <tr>
+                <td>{{ one_dojo.id }}</td>
+                <td><a href="">{{ one_dojo.name }}</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <form action="/dojos", method="post">
+        <label for="dname">Name:</label>
+        <input type="text" name="dname">
+        <input type="submit" value="CREATE">
+    </form>
+</body>
+</html>
