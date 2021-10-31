@@ -1,5 +1,5 @@
 # import the function from mysqlconnection that will return an instance of a connection. 
-from mysqlconnection import connectToMySQL
+from app.config.mysqlconnection import connectToMySQL
 
 # user class modeled for our users table in the database.
 class User:
