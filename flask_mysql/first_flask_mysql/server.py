@@ -1,23 +1,5 @@
-from flask import Flask, render_template, redirect, request
-# import the class from friend.py
-from friend import Friend
-app = Flask(__name__)
-@app.route("/")
-def index():
-    # call the get all classmethod to get all friends
-    friends = Friend.get_all()
-    print(friends)
-    return render_template("index.html", all_friends = friends)
-@app.route("/create_friend", methods=["POST"])
-    # call the save classmethod to save new data
-def create_friend():
-    data = { 
-        "fname":request.form["fname"],
-        "lname":request.form["lname"],
-        "occ":request.form["occ"]
-    }
-    Friend.save(data)
-    return redirect('/')
+from first_flask_mysql.controllers import friends
+from first_flask_mysql import app
 
 if __name__ == "__main__":
     app.run(debug=True)
