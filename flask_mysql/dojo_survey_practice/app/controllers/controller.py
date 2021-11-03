@@ -1,5 +1,5 @@
 from app import app
-from flask import Flask, render_template, redirect, request, flash, session
+from flask import Flask, render_template, redirect, request
 
 from app.models.dojo import Dojo
 
