@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Sasquatch Websighting</title>
+</head>
+<body>
+    <header>
+        <h2>Sasquatch Websighting</h2>
+        <p>Welcome {{ user.first_name }}</p>
+        <nav class="nav justify-content-end">
+            <a href="/dashboard/new/sighting" class="nav-link">Report Sighting</a>
+            <a href="/logout" class="nav-link">Logout</a>
+        </nav>
+    </header>
+    <main>
+        <div class="p-3 mb-2 bg-success text-white container">
+            <p> Reported Sighting:</p>
+            {% for sight in all_sights  %}
+    
+            <p>{{ sight.sighting.location}}   {{ sight.sighting.date_of_sighting }}  <a class="btn btn-warning" href="/sighting/edit/{{sight.sighting.id}}">Edit</a> | <a class="btn btn-danger" href="/sighting/delete/{{sight.sighting.id}}">Delete</a> | <a class="btn btn-secondary" href="/sighting/show/{{sight.sighting.id}}">View</a></p>
+                <p>Reported by: {{ sight.first_name }}</p>
+
+            {% endfor %}
+        </div>
+    </main>
+</body>
+</html>

@@ -23,6 +23,9 @@ class User:
         if len(results) >= 1:
             is_valid = False
             flash('Email address already exits. Please use another email')
+        if not Email_REGEX.match(user['email']):
+            is_valid = False
+            flash("Invalid email address")
         if len(user['first_name']) < 2:
             is_valid = False
             flash('First Name must be 2 characters long')
