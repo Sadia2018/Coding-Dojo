@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Sasquatch Websighting</title>
+</head>
+<body>
+    <h2 class="text-center">Sasquatch Websighting</h2>
+    <p class="text-center">Welcome {{user.first_name}}</p>
+    <header>
+        <nav class="nav justify-content-end">
+            <a href="/dashboard" class="nav-link">Dashboard</a>
+            <a href="/logout" class="nav-link">Logout</a>
+        </nav>
+    </header>
+    <p class="text-center"> Report a sighting</p>
+    {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for m in messages %}
+                    <h5>{{ m }}</h5>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    <div class="p-3 mb-2 bg-info text-white w-25 p-3 container">
+        <form action="/dashboard/new/sighting/create", method="post" class="form-group">
+            <section>
+                <label for="location">Location:</label>
+                <input type="text" name="location" class="form-control">
+            </section>
+            <section>
+                <label for="what_happened">What Happened:</label>
+                <textarea cols="30" rows="10" name="what_happened" class="form-control"></textarea>
+            </section>
+            <section>
+                <label for="date_of_sighting">Date of Siting:</label>
+                <input type="date" name="date_of_sighting" class="form-control">
+            </section>
+            <section>
+                <label for="number_of_sasquatches"># of Sasquatches:</label>
+                <input type="number" value="0" name="number_of_sasquatches" class="form-control">
+            </section>
+            <section>
+                <button class="btn btn-success form-control">CREATE</button>
+            </section>
+            <section style="display: none;">
+                <label for="users_id">User</label>
+                <input type="text" name="users_id" value="{{user.id}}">
+            </section>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Car Deals</title>
+</head>
+<header>
+    <nav class="nav justify-content-end">
+        <a href="/dashboard" class="nav-link">Dashboard</a>
+        <a href="/logout" class="nav-link">Logout</a>
+    </nav>
+</header>
+<body>
+    <h2 class="text-center"> Edit {{ one_car.model }}</h2>
+    {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for m in messages %}
+                    <h5>{{ m }}</h5>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <div class="p-3 mb-2 bg-info text-white w-25 p-3 container">
+            <form action="/dashboard/edit/update/{{one_car.id}}", method="post" class="form-group">
+                <section>
+                    <label for="price">Price:</label>
+                    <input type="number" value="{{ one_car.price }}" name="price" class="form-control">
+                </section>
+                <section>
+                    <label for="model">Model:</label>
+                    <input type="text" name="model" class="form-control" value="{{one_car.model}}">
+                </section>
+                <section>
+                    <label for="make">Make:</label>
+                    <input name="make" class="form-control" value="{{one_car.make}}">
+                </section>
+                <section>
+                    <label for="year">Year:</label>
+                    <input type="number" name="year" class="form-control" value="{{one_car.year}}">
+                </section>
+                <section>
+                    <label for="description">Description:</label>
+                    <input type="text" name="description" class="form-control" value="{{one_car.description}}">
+                </section>
+                <section>
+                    <button class="btn btn-success form-control">Update</button>
+                </section>
+                <section style="display: none;">
+                    <label for="users_id">User</label>
+                    <input type="text" name="users_id" value="{{user.id}}">
+                </section>
+        </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Car Deals</title>
+</head>
+<body>
+    <header>
+        <h2>Car Deals</h2>
+        <p>Welcome to Car Deals, {{ user.first_name }} !!!</p>
+        <nav class="nav justify-content-end">
+            <a href="/dashboard/new" class="nav-link">Add A Car</a>
+            <a href="/logout" class="nav-link">Logout</a>
+        </nav>
+    </header>
+    <main>
+        <div class="p-3 mb-2 bg-success text-white container">
+            <p> Cars for Sale:</p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th> Model </th>
+                        <th> Year </th>
+                        <th> Seller </th>
+                        <th> Actions </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for one_car in all_cars  %}
+                    <tr>
+                        <td>{{ one_car.car.model }}</td>
+                        <td>{{ one_car.car.year }}</td>
+                        <td>{{ one_car.first_name }} {{one_car.last_name }}</td>
+                        <td><a class="btn btn-warning" href="/dashboard/edit/{{one_car.car.id}}">Edit</a> | <a class="btn btn-danger" href="/dashboard/delete/{{one_car.car.id}}">Delete</a> | <a class="btn btn-secondary" href="/dashboard/show/{{one_car.car.id}}">View</a> </td>
+                    </tr>
+                    {% endfor %}
+                </tbody> 
+            </table>
+        </div>
+    </main>
+</body>
+</html>
