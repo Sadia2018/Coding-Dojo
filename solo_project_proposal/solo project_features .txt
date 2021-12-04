@@ -1,0 +1,18 @@
+Feature list. 
+
+Login and Registrtion. 
+Validations. 
+User creation. 
+User can retrive info from the database. 
+user can update / edit / delete profile. 
+User can go to an online menu and save favorite orders.
+A user's favorite orders can be retrived. 
+User stays in session the entire time.
+logout clear session.
+Static images. 
+Bootstrap / CSS styling. 
+
+Nice to have. 
+
+Responsive Website. 
+Google API for delivery address. 
