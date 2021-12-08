@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>SELL FAST</title>
+</head>
+<body>
+    <header>
+        <h2>Dashboard</h2>
+        <p>Welcome agent, {{ user.first_name }}</p>
+        <nav class="nav justify-content-end">
+            <a href="/dashboard/new" class="nav-link">Add A New Listing</a>
+            <a href="" class="nav-link">Account</a>
+            <a href="/logout" class="nav-link">Logout</a>
+        </nav>
+    </header>
+    <main>
+        <div class="p-3 mb-2 bg-success text-white container">
+            <p> Current Listings:</p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th> Property Name </th>
+                        <th> Address</th>
+                        <th> Number of bedrooms</th>
+                        <th> Number of bathrooms</th>
+                        <th> Price </th>
+                        <th> Actions </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for one_listing in all_listings  %}
+                    <tr>
+                        <td>{{ one_listing.listing.property_name }}</td>
+                        <td>{{ one_listing.listing.address }}</td>
+                        <td>{{ one_listing.listing.number_of_bedrooms }}</td>
+                        <td>{{ one_listing.listing.number_of_bathrooms }}</td>
+                        <td>{{ one_listing.listing.price }}</td>
+                        <td><a class="btn btn-warning" href="/dashboard/edit/{{one_car.car.id}}">Edit</a> | <a class="btn btn-danger" href="/dashboard/delete/{{one_car.car.id}}">Delete</a> | <a class="btn btn-secondary" href="/dashboard/show/{{one_car.car.id}}">View</a> </td>
+                    </tr>
+                    {% endfor %}
+                </tbody> 
+            </table>
+        </div>
+    </main>
+</body>
+</html>
