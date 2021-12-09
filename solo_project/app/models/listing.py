@@ -24,16 +24,16 @@ class Listing:
     @staticmethod
     def validate(listing):
         is_valid = True
-        if listing['property_type'] == '':
+        if 'property_type' not in listing:
             is_valid = False
             flash('Please enter a property type')
         if listing['address'] == '':
             is_valid = False
             flash('Please enter an address for the property')
-        if listing['year_built'] == '':
+        if 'year_built' not in listing:
             is_valid = False
             flash('Please enter the year property of built in')
-        if listing['price'] == '0':
+        if listing['price'] == '':
             is_valid = False
             flash('Please enter a valid price')
         if listing['description'] == '':
@@ -44,7 +44,7 @@ class Listing:
 # class method to save a Listing. 
     @classmethod
     def save(cls, data):
-        query = 'INSERT INTO listings (property_name, property_type, year_built, price, description, number_of_bedrooms, number_of_bathrooms, address, users_id) VALUES ( %(property_name)s, %(property_type)s, %(year_built)s, %(price)s, %(description)s, %(number_of_bedrooms)s, %(number_of_bedrooms)s, %(address)s, %(users_id)s );'
+        query = 'INSERT INTO listings (property_name, property_type, year_built, price, description, number_of_bedrooms, number_of_bathrooms, address, users_id) VALUES ( %(property_name)s, %(property_type)s, %(year_built)s, %(price)s, %(description)s, %(number_of_bedrooms)s, %(number_of_bathrooms)s, %(address)s, %(users_id)s );'
         return connectToMySQL(cls.db_name).query_db(query, data)
 
 # class method to delete a listing.
@@ -65,5 +65,5 @@ class Listing:
 # class method to update a user. 
     @classmethod
     def update(cls, data):
-        q = "UPDATE listings SET property_name=%(property_name)s, property_type=%(property_type)s, year_built=%(year_built)s, price=%(price)s, description=%(description)s, number_of_bedrooms=%(number_of_bedrooms)s, number_of_bathrooms=%(number_of_bathrooms)s, address=%(address)s WHERE id = %(id)s;"
+        q = "UPDATE listings SET property_name=%(property_name)s, price=%(price)s, description=%(description)s, address=%(address)s WHERE id = %(id)s;"
         return connectToMySQL(cls.db_name).query_db(q, data)

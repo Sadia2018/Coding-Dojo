@@ -44,3 +44,9 @@ def login():
         return redirect('/')
     session['user_id'] = user.id
     return redirect('/dashboard')
+
+#Logout Route. 
+@app.route('/logout')
+def logout():
+    session.clear()
+    return redirect('/')

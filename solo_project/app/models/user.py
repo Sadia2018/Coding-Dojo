@@ -102,8 +102,8 @@ class User:
                 'description':row['description'],
                 'number_of_bedrooms':row['number_of_bedrooms'],
                 'number_of_bathrooms':row['number_of_bathrooms'],
-                'created_at':row['cars.created_at'],
-                'updated_at': row['cars.updated_at']
+                'created_at':row['listings.created_at'],
+                'updated_at': row['listings.updated_at']
             }
             user_instance.listing = Listing(data)
             all_listings.append(user_instance)

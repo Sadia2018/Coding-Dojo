@@ -10,7 +10,7 @@
 <body>
     <header>
         <h2>Dashboard</h2>
-        <p>Welcome agent, {{ user.first_name }}</p>
+        <p>Welcome Sell Fast Agent, {{ user.first_name }}</p>
         <nav class="nav justify-content-end">
             <a href="/dashboard/new" class="nav-link">Add A New Listing</a>
             <a href="" class="nav-link">Account</a>
@@ -39,7 +39,7 @@
                         <td>{{ one_listing.listing.number_of_bedrooms }}</td>
                         <td>{{ one_listing.listing.number_of_bathrooms }}</td>
                         <td>{{ one_listing.listing.price }}</td>
-                        <td><a class="btn btn-warning" href="/dashboard/edit/{{one_car.car.id}}">Edit</a> | <a class="btn btn-danger" href="/dashboard/delete/{{one_car.car.id}}">Delete</a> | <a class="btn btn-secondary" href="/dashboard/show/{{one_car.car.id}}">View</a> </td>
+                        <td><a class="btn btn-warning" href="/dashboard/edit/{{one_listing.listing.id}}">Edit</a> | <a class="btn btn-danger" href="/dashboard/delete/{{one_listing.listing.id}}">Delete</a> | <a class="btn btn-secondary" href="/dashboard/show/{{one_listing.listing.id}}">View</a> </td>
                     </tr>
                     {% endfor %}
                 </tbody> 

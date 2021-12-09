@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>SELL FAST</title>
+</head>
+<header>
+    <nav class="nav justify-content-end">
+        <a href="/dashboard" class="nav-link">Dashboard</a>
+        <a href="/logout" class="nav-link">Logout</a>
+    </nav>
+</header>
+<body>
+    <h2 class="text-center"> Edit Listing : {{ one_listing.property_name }}</h2>
+    {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for m in messages %}
+                    <h5>{{ m }}</h5>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <div class="p-3 mb-2 bg-info text-white w-25 p-3 container">
+            <form action="/dashboard/edit/update/{{one_listing.id}}", method="post" class="form-group">
+                <section>
+                    <label for="property_name">Property Name:</label>
+                    <input type="text" value="{{ one_listing.property_name }}" name="property_name" class="form-control">
+                </section>
+                <section>
+                    <label for="address">Address:</label>
+                    <input type="text" name="address" class="form-control" value="{{one_listing.address}}">
+                </section>
+                <section>
+                    <label for="price">Price:</label>
+                    <input type="text" name="price" class="form-control" value="{{one_listing.price}}">
+                </section>
+                <section>
+                    <label for="description">Description:</label>
+                    <input type="text" name="description" class="form-control" value="{{one_listing.description}}">
+                </section>
+                <br>
+                <section>
+                    <button class="btn btn-success form-control">Update</button>
+                </section>
+                <section style="display: none;">
+                    <label for="users_id">User</label>
+                    <input type="text" name="users_id" value="{{user.id}}">
+                </section>
+        </div>
+</body>
+</html>
