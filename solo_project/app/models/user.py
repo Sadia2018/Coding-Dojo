@@ -100,6 +100,7 @@ class User:
                 'year_built':row['year_built'],
                 'price':row['price'],
                 'description':row['description'],
+                'image':row['image'],
                 'number_of_bedrooms':row['number_of_bedrooms'],
                 'number_of_bathrooms':row['number_of_bathrooms'],
                 'created_at':row['listings.created_at'],

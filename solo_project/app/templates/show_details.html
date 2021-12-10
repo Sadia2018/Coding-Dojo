@@ -15,6 +15,7 @@
         <a href="/logout" class="nav-link">Logout</a>
     </nav>
     <main class="p-3 mb-2 bg-success text-white container">
+        <p><img src="{{url_for('static',filename='images/main_pic.jpg')}}" width="64px"  alt="display image"></p>
         <p class="text-left font-weight-bold">Property Name: {{one_listing.property_name}}</p>
         <P class="text-left font-weight-bold">Description: {{one_listing.description}}</P>
         <P class="text-left font-weight-bold">Address: {{one_listing.address}}</P>
@@ -22,7 +23,7 @@
         <P class="text-left font-weight-bold">Number of bedrooms: {{one_listing.number_of_bedrooms}}</P>
         <P class="text-left font-weight-bold">Number of bathrooms: {{one_listing.number_of_bathrooms}}</P>
 
-        <P class="text-left font-weight-bold">Seller: {{ user.first_name }} {{ user.last_name}}</P>
+        <P class="text-left font-weight-bold">Seller:{{ user.first_name }}{{ user.last_name}}</P>
     </main>
 </body>
 </html>

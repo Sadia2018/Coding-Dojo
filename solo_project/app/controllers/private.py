@@ -37,6 +37,7 @@ def create():
         'address' : request.form['address'],
         'year_built': request.form ['year_built'],
         'price': request.form ['price'],
+        'image': request.form['image'],
         'description': request.form['description'],
         'number_of_bedrooms': request.form['number_of_bedrooms'],
         'number_of_bathrooms': request.form['number_of_bathrooms'],

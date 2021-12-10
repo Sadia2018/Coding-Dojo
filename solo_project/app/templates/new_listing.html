@@ -24,7 +24,7 @@
             {% endif %}
         {% endwith %}
     <div class="p-3 mb-2 bg-info text-white w-25 p-3 container">
-        <form action="/dashboard/new/create", method="post" class="form-group">
+        <form action="/dashboard/new/create", method="post" class="form-group" enctype="multipart/form-data">
             <section>
                 <label for="property_name">Property Name:</label>
                 <input type="text" name="property_name" class="form-control">
@@ -32,11 +32,11 @@
             <section>
                 <p>Property Type:</p>
                 <label for="Single Family House" value="property_type">Single Family House</label>
-                <input type="radio" id="Single Family House" name="property_type" class="form-control" value="property_type">
+                <input type="radio" id="Single Family House" name="property_type" class="form-control">
                 <label for="Townhouse" value="property_type">Townhouse</label>
-                <input type="radio" id="Townhouse" name="property_type" class="form-control" value="property_type">
+                <input type="radio" id="Townhouse" name="property_type" class="form-control">
                 <label for="Condoinium" value="property_type">Condominium</label>
-                <input type="radio" id="Condoinium" name="property_type" class="form-control" value="property_type">
+                <input type="radio" id="Condoinium" name="property_type" class="form-control">
             </section>
             <section>
                 <label for="address">Address:</label>
@@ -77,6 +77,12 @@
                 <label for="description">Description:</label>
                 <textarea cols="30" rows="10" name="description" class="form-control"></textarea>
             </section>
+            <br>
+            <section>
+                <label for="image">Please upload an image:</label>
+                <input type="file" name="image" accept="image/*">
+            </section>
+            <br>
             <section>
                 <button class="btn btn-success form-control">Add</button>
             </section>

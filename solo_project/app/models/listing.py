@@ -15,6 +15,7 @@ class Listing:
         self.year_built = data['year_built']
         self.price = data['price']
         self.description = data['description']
+        self.image = data['image']
         self.number_of_bedrooms = data['number_of_bedrooms']
         self.number_of_bathrooms = data['number_of_bathrooms']
         self.created_at = data['created_at']
@@ -44,7 +45,7 @@ class Listing:
 # class method to save a Listing. 
     @classmethod
     def save(cls, data):
-        query = 'INSERT INTO listings (property_name, property_type, year_built, price, description, number_of_bedrooms, number_of_bathrooms, address, users_id) VALUES ( %(property_name)s, %(property_type)s, %(year_built)s, %(price)s, %(description)s, %(number_of_bedrooms)s, %(number_of_bathrooms)s, %(address)s, %(users_id)s );'
+        query = 'INSERT INTO listings (property_name, property_type, year_built, price, description, number_of_bedrooms, number_of_bathrooms, address, image, users_id) VALUES ( %(property_name)s, %(property_type)s, %(year_built)s, %(price)s, %(description)s, %(number_of_bedrooms)s, %(number_of_bathrooms)s, %(address)s, %(image)s, %(users_id)s );'
         return connectToMySQL(cls.db_name).query_db(query, data)
 
 # class method to delete a listing.
