@@ -8,22 +8,26 @@
     <title>SELL FAST</title>
 </head>
 <body>
-    <h3 class="text-left font-weight-bold"> Here are the listing details :</h3>
-    <nav class="nav justify-content-end">
-        <a href="/dashboard" class="nav-link">Dashboard</a>
-        <a href="" class="nav-link">Account</a>
-        <a href="/logout" class="nav-link">Logout</a>
-    </nav>
+    <header>
+        <nav class="nav justify-content-end navbar bg-secondary">
+            <a href="/dashboard" class="nav-link">Dashboard</a>
+            <a href="" class="nav-link">Account</a>
+            <a href="/logout" class="nav-link">Logout</a>
+        </nav>
+    </header>
+    <br>
+    <h2 class="text-left container">Here are the listing details:</h2>
+    <br>
     <main class="p-3 mb-2 bg-success text-white container">
-        <p><img src="{{url_for('static',filename='images/main_pic.jpg')}}" width="64px"  alt="display image"></p>
+        <p><img src="{{url_for('static',filename='images/main_pic.jpg')}}" width="100px"  alt="display image"></p>
         <p class="text-left font-weight-bold">Property Name: {{one_listing.property_name}}</p>
+        <p class="text-left font-weight-bold">Property Type: {{one_listing.property_type}}</p>
         <P class="text-left font-weight-bold">Description: {{one_listing.description}}</P>
         <P class="text-left font-weight-bold">Address: {{one_listing.address}}</P>
         <P class="text-left font-weight-bold">Selling Price: {{one_listing.price}}</P>
         <P class="text-left font-weight-bold">Number of bedrooms: {{one_listing.number_of_bedrooms}}</P>
         <P class="text-left font-weight-bold">Number of bathrooms: {{one_listing.number_of_bathrooms}}</P>
-
-        <P class="text-left font-weight-bold">Seller:{{ user.first_name }}{{ user.last_name}}</P>
+        <P class="text-left font-weight-bold">Seller:{{ user.first_name }} {{ user.last_name}}</P>
     </main>
 </body>
 </html>

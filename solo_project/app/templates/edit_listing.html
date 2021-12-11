@@ -8,12 +8,14 @@
     <title>SELL FAST</title>
 </head>
 <header>
-    <nav class="nav justify-content-end">
+    <nav class="nav justify-content-end navbar bg-secondary">
         <a href="/dashboard" class="nav-link">Dashboard</a>
+        <a href="" class="nav-link">Account</a>
         <a href="/logout" class="nav-link">Logout</a>
     </nav>
 </header>
 <body>
+    <br>
     <h2 class="text-center"> Edit Listing : {{ one_listing.property_name }}</h2>
     {% with messages = get_flashed_messages() %}
             {% if messages %}
@@ -22,6 +24,7 @@
                 {% endfor %}
             {% endif %}
         {% endwith %}
+        <br>
         <div class="p-3 mb-2 bg-info text-white w-25 p-3 container">
             <form action="/dashboard/edit/update/{{one_listing.id}}", method="post" class="form-group">
                 <section>
@@ -34,11 +37,11 @@
                 </section>
                 <section>
                     <label for="price">Price:</label>
-                    <input type="text" name="price" class="form-control" value="{{one_listing.price}}">
+                    <input type="text" name="price" class="form-control" data-type="currency" placeholder="$" value="{{one_listing.price}}">
                 </section>
                 <section>
                     <label for="description">Description:</label>
-                    <input type="text" name="description" class="form-control" value="{{one_listing.description}}">
+                    <input cols="30" rows="10" name="description" class="form-control" value="{{one_listing.description}}">
                 </section>
                 <br>
                 <section>

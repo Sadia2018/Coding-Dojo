@@ -9,14 +9,15 @@
 </head>
 <body>
     <header>
-        <h2>Dashboard</h2>
-        <p>Welcome Sell Fast Agent, {{ user.first_name }}</p>
-        <nav class="nav justify-content-end">
+        <nav class="nav justify-content-end navbar bg-secondary">
             <a href="/dashboard/new" class="nav-link">Add A New Listing</a>
             <a href="" class="nav-link">Account</a>
             <a href="/logout" class="nav-link">Logout</a>
         </nav>
     </header>
+    <br>
+    <h2 class="text-center">Dashboard</h2>
+    <p class="text-left p-3 mb-2 bg-success text-white container">Welcome Sell Fast Agent, {{ user.first_name }}</p>
     <main>
         <div class="p-3 mb-2 bg-success text-white container">
             <p> Current Listings:</p>
@@ -41,7 +42,7 @@
                         <td>{{ one_listing.listing.number_of_bedrooms }}</td>
                         <td>{{ one_listing.listing.number_of_bathrooms }}</td>
                         <td>{{ one_listing.listing.price }}</td>
-                        <td><a class="btn btn-warning" href="/dashboard/edit/{{one_listing.listing.id}}">Edit</a> | <a class="btn btn-danger" href="/dashboard/delete/{{one_listing.listing.id}}">Delete</a> | <a class="btn btn-secondary" href="/dashboard/show/{{one_listing.listing.id}}">View</a> </td>
+                        <td><a class="btn btn-warning" href="/dashboard/edit/{{one_listing.listing.id}}">Edit</a>|<a class="btn btn-danger" href="/dashboard/delete/{{one_listing.listing.id}}">Delete</a>|<a class="btn btn-secondary" href="/dashboard/show/{{one_listing.listing.id}}">View</a> </td>
                     </tr>
                     {% endfor %}
                 </tbody> 
