@@ -61,7 +61,7 @@ def show_details(id):
     data = {
         'id':id
     }
-    return render_template('show_details.html', user=User.get_one(data), one_listing=Listing.get_one(data))
+    return render_template('show_details.html', user=User.get_one({'id': session['user_id']}), one_listing=Listing.get_oneW_user(data))
 
 #----- app routes that renders the edit.
 @app.route('/dashboard/edit/<int:id>')

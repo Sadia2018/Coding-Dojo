@@ -20,6 +20,7 @@ class Listing:
         self.number_of_bathrooms = data['number_of_bathrooms']
         self.created_at = data['created_at']
         self.updated_at = data['updated_at']
+        self.user = None
 
 # static mehtod to validate the Listings. 
     @staticmethod
@@ -68,3 +69,13 @@ class Listing:
     def update(cls, data):
         q = "UPDATE listings SET property_name=%(property_name)s, price=%(price)s, description=%(description)s, address=%(address)s WHERE id = %(id)s;"
         return connectToMySQL(cls.db_name).query_db(q, data)
+
+
+    @classmethod
+    def get_oneW_user(cls,data):
+        q = "SELECT * FROM listings LEFT JOIN users on listings.users_id = users.id WHERE listings.id = %(id)s;"
+        results = connectToMySQL(cls.db_name).query_db(q,data)
+        one_listing = cls(results[0])
+        one_listing.user = user.User.get_one({'id': results[0]['users_id']})
+        return one_listing
+        
