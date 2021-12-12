@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <nav class="nav justify-content-end navbar bg-secondary">
+        <nav class="nav justify-content-end navbar bg-secondary container">
             <a href="/dashboard/new" class="nav-link">Add A New Listing</a>
             <a href="" class="nav-link">Account</a>
             <a href="/logout" class="nav-link">Logout</a>
@@ -17,7 +17,7 @@
     </header>
     <br>
     <h2 class="text-center">Dashboard</h2>
-    <p class="text-left p-3 mb-2 bg-success text-white container">Welcome Sell Fast Agent, {{ user.first_name }}</p>
+    <p class="text-left p-3 mb-2 bg-success text-white d-flex container">Welcome Sell Fast Agent, {{ user.first_name }}</p>
     <main>
         <div class="p-3 mb-2 bg-success text-white container">
             <p> Current Listings:</p>
@@ -42,12 +42,21 @@
                         <td>{{ one_listing.listing.number_of_bedrooms }}</td>
                         <td>{{ one_listing.listing.number_of_bathrooms }}</td>
                         <td>{{ one_listing.listing.price }}</td>
-                        <td><a class="btn btn-warning" href="/dashboard/edit/{{one_listing.listing.id}}">Edit</a>|<a class="btn btn-danger" href="/dashboard/delete/{{one_listing.listing.id}}">Delete</a>|<a class="btn btn-secondary" href="/dashboard/show/{{one_listing.listing.id}}">View</a> </td>
+                        <td><a class="btn btn-warning d-flex" href="/dashboard/edit/{{one_listing.listing.id}}">Edit</a><a class="btn btn-danger d-flex" href="/dashboard/delete/{{one_listing.listing.id}}">Delete</a><a class="btn btn-secondary d-flex" href="/dashboard/show/{{one_listing.listing.id}}">View</a> </td>
                     </tr>
                     {% endfor %}
                 </tbody> 
             </table>
         </div>
     </main>
+    <br>
+    <footer class="bg-info container">
+        <p class="text-center font-weight-bold">Sell Fast Corporation</p>
+        <div class="text-center">
+            <a href="https://lh3.googleusercontent.com/cdN3XxkXmg2r2Oa8wb47BsjMkTBrmp4JRuNgFrQKzKSZUHDOwia3_anjC446OwsN-VN--tkzwhx4fa7nAoQ75U41X8pRfizBJm-HL8Nhlte-aF44yLf-4z9y69eioss4IMjnaFCWsg=s32-p-k?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/cdN3XxkXmg2r2Oa8wb47BsjMkTBrmp4JRuNgFrQKzKSZUHDOwia3_anjC446OwsN-VN--tkzwhx4fa7nAoQ75U41X8pRfizBJm-HL8Nhlte-aF44yLf-4z9y69eioss4IMjnaFCWsg=s32-p-k" /> </a>
+            <a href="https://lh3.googleusercontent.com/AXwPVKJgoI9b9mpgiyjbqNycO7m_d3GR7fNlLGZHlH89nxXyd0W9S3nxqciK-s23dye8V1FVSEI0ZTEyqF3IwgS2WAZtYgh6KF05fXeHrLBbeNH1XwsrveNjebw0RB848uKw9uv_EA=s32-p-k?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/AXwPVKJgoI9b9mpgiyjbqNycO7m_d3GR7fNlLGZHlH89nxXyd0W9S3nxqciK-s23dye8V1FVSEI0ZTEyqF3IwgS2WAZtYgh6KF05fXeHrLBbeNH1XwsrveNjebw0RB848uKw9uv_EA=s32-p-k" /> </a>
+            <a href="https://lh3.googleusercontent.com/4EfqAKXRz8zy-XBAH2GnVGvzNFEXdc5UtaALpUWm-WUE4teSyMXyyqangNCY529mXFz1UDxLCF5uXI33D57CiP8FQHYodAbjGfpsOTmFtiuttrGJG1PqUEpHc-GHGZJzcG0y79cGGQ=s32-p-k?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/4EfqAKXRz8zy-XBAH2GnVGvzNFEXdc5UtaALpUWm-WUE4teSyMXyyqangNCY529mXFz1UDxLCF5uXI33D57CiP8FQHYodAbjGfpsOTmFtiuttrGJG1PqUEpHc-GHGZJzcG0y79cGGQ=s32-p-k" /> </a>
+        </div>
+    </footer>
 </body>
 </html>
