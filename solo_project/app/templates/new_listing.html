@@ -18,13 +18,15 @@
     <br>
     <h2 class="text-left container">{{ user.first_name }}, put a property up for sale and take advantage of our high commission rates !</h2>
     <br>
-    {% with messages = get_flashed_messages() %}
-            {% if messages %}
-                {% for m in messages %}
-                    <h5>{{ m }}</h5>
-                {% endfor %}
-            {% endif %}
-        {% endwith %}
+    <div class="text-center text-danger">
+        {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for m in messages %}
+                        <h5>{{ m }}</h5>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+    </div>
     <div class="p-3 mb-2 bg-info text-white w-25 p-3 container">
         <form action="/dashboard/new/create", method="post" class="form-group">
             <section>
@@ -99,13 +101,22 @@
             </section>
         </form>
     </div>
-    <br>
-    <footer class="bg-info container">
-        <p class="text-center font-weight-bold">Sell Fast Corporation</p>
-        <div class="text-center">
-            <a href="https://lh3.googleusercontent.com/cdN3XxkXmg2r2Oa8wb47BsjMkTBrmp4JRuNgFrQKzKSZUHDOwia3_anjC446OwsN-VN--tkzwhx4fa7nAoQ75U41X8pRfizBJm-HL8Nhlte-aF44yLf-4z9y69eioss4IMjnaFCWsg=s32-p-k?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/cdN3XxkXmg2r2Oa8wb47BsjMkTBrmp4JRuNgFrQKzKSZUHDOwia3_anjC446OwsN-VN--tkzwhx4fa7nAoQ75U41X8pRfizBJm-HL8Nhlte-aF44yLf-4z9y69eioss4IMjnaFCWsg=s32-p-k" /> </a>
-            <a href="https://lh3.googleusercontent.com/AXwPVKJgoI9b9mpgiyjbqNycO7m_d3GR7fNlLGZHlH89nxXyd0W9S3nxqciK-s23dye8V1FVSEI0ZTEyqF3IwgS2WAZtYgh6KF05fXeHrLBbeNH1XwsrveNjebw0RB848uKw9uv_EA=s32-p-k?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/AXwPVKJgoI9b9mpgiyjbqNycO7m_d3GR7fNlLGZHlH89nxXyd0W9S3nxqciK-s23dye8V1FVSEI0ZTEyqF3IwgS2WAZtYgh6KF05fXeHrLBbeNH1XwsrveNjebw0RB848uKw9uv_EA=s32-p-k" /> </a>
-            <a href="https://lh3.googleusercontent.com/4EfqAKXRz8zy-XBAH2GnVGvzNFEXdc5UtaALpUWm-WUE4teSyMXyyqangNCY529mXFz1UDxLCF5uXI33D57CiP8FQHYodAbjGfpsOTmFtiuttrGJG1PqUEpHc-GHGZJzcG0y79cGGQ=s32-p-k?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/4EfqAKXRz8zy-XBAH2GnVGvzNFEXdc5UtaALpUWm-WUE4teSyMXyyqangNCY529mXFz1UDxLCF5uXI33D57CiP8FQHYodAbjGfpsOTmFtiuttrGJG1PqUEpHc-GHGZJzcG0y79cGGQ=s32-p-k" /> </a>
+    <footer class="bg-info container p-2">
+        <p class="text-center font-weight-bold">Sell Fast Corporation &copy;</p>
+        <div class="row">
+            <div class="text-left col-4">
+                <div class="input-group">
+                    <input type="text" class="form-control" aria-label="Sign-up" placeholder="Let's stay connected !">
+                    <div class="input-group-append">
+                        <button class="btn-success form-control">Sign up !</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-8 text-right">
+                <a href="https://lh3.googleusercontent.com/cdN3XxkXmg2r2Oa8wb47BsjMkTBrmp4JRuNgFrQKzKSZUHDOwia3_anjC446OwsN-VN--tkzwhx4fa7nAoQ75U41X8pRfizBJm-HL8Nhlte-aF44yLf-4z9y69eioss4IMjnaFCWsg=s32-p-k?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/cdN3XxkXmg2r2Oa8wb47BsjMkTBrmp4JRuNgFrQKzKSZUHDOwia3_anjC446OwsN-VN--tkzwhx4fa7nAoQ75U41X8pRfizBJm-HL8Nhlte-aF44yLf-4z9y69eioss4IMjnaFCWsg=s32-p-k" /> </a>
+                <a href="https://lh3.googleusercontent.com/Wu8HsQBppT51hwy2HuVpGsCehHYPQj3WrPS7MxbqpvALXyqUCZi2RwKiN3eemd_oVmBRjiYeQhkBzgNa1KGWs6bSY5U6iF7uM1LrwaB84gXxsMnjk75hUUli0jndvhpL9x8tBsiNqw=s32-p-k?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/Wu8HsQBppT51hwy2HuVpGsCehHYPQj3WrPS7MxbqpvALXyqUCZi2RwKiN3eemd_oVmBRjiYeQhkBzgNa1KGWs6bSY5U6iF7uM1LrwaB84gXxsMnjk75hUUli0jndvhpL9x8tBsiNqw=s32-p-k" /> </a>
+                <a href="https://lh3.googleusercontent.com/4EfqAKXRz8zy-XBAH2GnVGvzNFEXdc5UtaALpUWm-WUE4teSyMXyyqangNCY529mXFz1UDxLCF5uXI33D57CiP8FQHYodAbjGfpsOTmFtiuttrGJG1PqUEpHc-GHGZJzcG0y79cGGQ=s32-p-k?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/4EfqAKXRz8zy-XBAH2GnVGvzNFEXdc5UtaALpUWm-WUE4teSyMXyyqangNCY529mXFz1UDxLCF5uXI33D57CiP8FQHYodAbjGfpsOTmFtiuttrGJG1PqUEpHc-GHGZJzcG0y79cGGQ=s32-p-k" /> </a>
+            </div>
         </div>
     </footer>
 </body>

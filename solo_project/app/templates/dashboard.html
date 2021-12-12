@@ -17,10 +17,10 @@
     </header>
     <br>
     <h2 class="text-center">Dashboard</h2>
-    <p class="text-left p-3 mb-2 bg-success text-white d-flex container">Welcome Sell Fast Agent, {{ user.first_name }}</p>
+    <p class="text-left p-3 mb-2 bg-success text-white d-flex container font-weight-bold">Welcome Sell Fast Agent, {{ user.first_name }}</p>
     <main>
-        <div class="p-3 mb-2 bg-success text-white container">
-            <p> Current Listings:</p>
+        <div class="p-3 mb-2 container bg-success p-2 text-white">
+            <p class="font-weight-bold"> Current Listings:</p>
             <table class="table">
                 <thead>
                     <tr>
@@ -36,7 +36,7 @@
                 <tbody>
                     {% for one_listing in all_listings  %}
                     <tr>
-                        <td> <img src="{{url_for('static',filename='images/main_pic.jpg')}}" width="64px"  alt="display image"></td>
+                        <td> <img src="{{url_for('static',filename='images/main_pic.jpg')}}" width="64px"  alt="display image" class="img-thumbnail"></td>
                         <td>{{ one_listing.listing.property_name }}</td>
                         <td>{{ one_listing.listing.address }}</td>
                         <td>{{ one_listing.listing.number_of_bedrooms }}</td>
@@ -49,13 +49,22 @@
             </table>
         </div>
     </main>
-    <br>
-    <footer class="bg-info container">
-        <p class="text-center font-weight-bold">Sell Fast Corporation</p>
-        <div class="text-center">
-            <a href="https://lh3.googleusercontent.com/cdN3XxkXmg2r2Oa8wb47BsjMkTBrmp4JRuNgFrQKzKSZUHDOwia3_anjC446OwsN-VN--tkzwhx4fa7nAoQ75U41X8pRfizBJm-HL8Nhlte-aF44yLf-4z9y69eioss4IMjnaFCWsg=s32-p-k?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/cdN3XxkXmg2r2Oa8wb47BsjMkTBrmp4JRuNgFrQKzKSZUHDOwia3_anjC446OwsN-VN--tkzwhx4fa7nAoQ75U41X8pRfizBJm-HL8Nhlte-aF44yLf-4z9y69eioss4IMjnaFCWsg=s32-p-k" /> </a>
-            <a href="https://lh3.googleusercontent.com/AXwPVKJgoI9b9mpgiyjbqNycO7m_d3GR7fNlLGZHlH89nxXyd0W9S3nxqciK-s23dye8V1FVSEI0ZTEyqF3IwgS2WAZtYgh6KF05fXeHrLBbeNH1XwsrveNjebw0RB848uKw9uv_EA=s32-p-k?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/AXwPVKJgoI9b9mpgiyjbqNycO7m_d3GR7fNlLGZHlH89nxXyd0W9S3nxqciK-s23dye8V1FVSEI0ZTEyqF3IwgS2WAZtYgh6KF05fXeHrLBbeNH1XwsrveNjebw0RB848uKw9uv_EA=s32-p-k" /> </a>
-            <a href="https://lh3.googleusercontent.com/4EfqAKXRz8zy-XBAH2GnVGvzNFEXdc5UtaALpUWm-WUE4teSyMXyyqangNCY529mXFz1UDxLCF5uXI33D57CiP8FQHYodAbjGfpsOTmFtiuttrGJG1PqUEpHc-GHGZJzcG0y79cGGQ=s32-p-k?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/4EfqAKXRz8zy-XBAH2GnVGvzNFEXdc5UtaALpUWm-WUE4teSyMXyyqangNCY529mXFz1UDxLCF5uXI33D57CiP8FQHYodAbjGfpsOTmFtiuttrGJG1PqUEpHc-GHGZJzcG0y79cGGQ=s32-p-k" /> </a>
+    <footer class="bg-info container p-2">
+        <p class="text-center font-weight-bold">Sell Fast Corporation &copy;</p>
+        <div class="row">
+            <div class="text-left col-4">
+                <div class="input-group">
+                    <input type="text" class="form-control" aria-label="Sign-up" placeholder="Let's stay connected !">
+                    <div class="input-group-append">
+                        <button class="btn-success form-control">Sign up !</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-8 text-right">
+                <a href="https://lh3.googleusercontent.com/cdN3XxkXmg2r2Oa8wb47BsjMkTBrmp4JRuNgFrQKzKSZUHDOwia3_anjC446OwsN-VN--tkzwhx4fa7nAoQ75U41X8pRfizBJm-HL8Nhlte-aF44yLf-4z9y69eioss4IMjnaFCWsg=s32-p-k?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/cdN3XxkXmg2r2Oa8wb47BsjMkTBrmp4JRuNgFrQKzKSZUHDOwia3_anjC446OwsN-VN--tkzwhx4fa7nAoQ75U41X8pRfizBJm-HL8Nhlte-aF44yLf-4z9y69eioss4IMjnaFCWsg=s32-p-k" /> </a>
+                <a href="https://lh3.googleusercontent.com/Wu8HsQBppT51hwy2HuVpGsCehHYPQj3WrPS7MxbqpvALXyqUCZi2RwKiN3eemd_oVmBRjiYeQhkBzgNa1KGWs6bSY5U6iF7uM1LrwaB84gXxsMnjk75hUUli0jndvhpL9x8tBsiNqw=s32-p-k?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/Wu8HsQBppT51hwy2HuVpGsCehHYPQj3WrPS7MxbqpvALXyqUCZi2RwKiN3eemd_oVmBRjiYeQhkBzgNa1KGWs6bSY5U6iF7uM1LrwaB84gXxsMnjk75hUUli0jndvhpL9x8tBsiNqw=s32-p-k" /> </a>
+                <a href="https://lh3.googleusercontent.com/4EfqAKXRz8zy-XBAH2GnVGvzNFEXdc5UtaALpUWm-WUE4teSyMXyyqangNCY529mXFz1UDxLCF5uXI33D57CiP8FQHYodAbjGfpsOTmFtiuttrGJG1PqUEpHc-GHGZJzcG0y79cGGQ=s32-p-k?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/4EfqAKXRz8zy-XBAH2GnVGvzNFEXdc5UtaALpUWm-WUE4teSyMXyyqangNCY529mXFz1UDxLCF5uXI33D57CiP8FQHYodAbjGfpsOTmFtiuttrGJG1PqUEpHc-GHGZJzcG0y79cGGQ=s32-p-k" /> </a>
+            </div>
         </div>
     </footer>
 </body>

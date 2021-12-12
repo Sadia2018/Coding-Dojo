@@ -32,7 +32,7 @@ class Listing:
         if listing['address'] == '':
             is_valid = False
             flash('Please enter an address for the property')
-        if 'year_built' not in listing:
+        if listing['year_built'] =='':
             is_valid = False
             flash('Please enter the year property of built in')
         if listing['price'] == '':

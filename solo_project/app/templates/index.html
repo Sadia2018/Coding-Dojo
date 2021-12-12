@@ -17,13 +17,16 @@
 <body> 
     <p>
         <h2 class="text-center"> Welcome to Sell Fast !</h2>
-        {% with messages = get_flashed_messages() %}
-            {% if messages %}
-                {% for m in messages %}
-                    <h5>{{ m }}</h5>
-                {% endfor %}
-            {% endif %}
-        {% endwith %}
+        <br>
+        <div class="text-center text-danger">
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for m in messages %}
+                        <h5>{{ m }}</h5>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </div>
     </p>
     <main>
         <div class="p-3 mb-2 bg-info text-white w-25 p-3 container">
