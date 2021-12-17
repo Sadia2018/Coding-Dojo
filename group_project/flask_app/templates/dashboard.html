@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>The Shop</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+<body>
+    <header>
+        <nav class="nav justify-content-end navbar bg-secondary container">
+            <a href="/products/new" class="nav-link">Create a Product</button></a>
+            <a href="/logout" class="nav-link"> Logout</a>
+        </nav>
+    </header>
+    <div class="text-center text-danger">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for m in messages %}
+                    <h5>{{ m }}</h5>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </div>
+    <p>
+        <h2 class="text-center">Welcome {{user.first_name}} {{user.last_name}}!</h2>
+    </p>
+        <div class="container-sm border border-dark rounded container">
+            <h2 class="dash-heading text-center border border-dark mt-2 container">Products</h2>
+            <div class="wall border border-dark rounded mb-2 p-3 mb-2 container bg-success p-2 text-white">
+                <h5>To view product details click on name of product</h5>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th> Product Name </th>
+                            <th> Seller </th>
+                            <th> Actions</th>
+                        <tr>
+                        </thead>
+                        <tbody>
+                        {% for product in products  %}
+                        <tr>
+                            <td>
+                                <a href="/products/{{product.id}}"><button type="button"> {{product.name}}</button></a>
+                            </td>
+                            <td>
+                                {{product.creator.first_name}} {{product.creator.last_name}}
+                            </td>
+                            <td>
+                                {% if user.id == product.creator.id %}
+                                <a href="/products/{{product.id}}/edit"><button  type="button"> Edit</button></a>
+                                <a href="/products/{{product.id}}/delete"><button  type="button" > Delete</button></a>
+                                {% endif %}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+            </div>
+        </div>
+        <footer class="bg-info container p-2">
+            <p class="text-center font-weight-bold">The Shop Corporation &copy;</p>
+            <div class="row">
+                <div class="text-left col-4">
+                    <div class="input-group">
+                        <input type="text" class="form-control" aria-label="Sign-up" placeholder="Let's stay connected !">
+                        <div class="input-group-append">
+                            <button class="btn-success form-control">Sign up !</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8 text-right">
+                    <a href="https://lh3.googleusercontent.com/cdN3XxkXmg2r2Oa8wb47BsjMkTBrmp4JRuNgFrQKzKSZUHDOwia3_anjC446OwsN-VN--tkzwhx4fa7nAoQ75U41X8pRfizBJm-HL8Nhlte-aF44yLf-4z9y69eioss4IMjnaFCWsg=s32-p-k?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/cdN3XxkXmg2r2Oa8wb47BsjMkTBrmp4JRuNgFrQKzKSZUHDOwia3_anjC446OwsN-VN--tkzwhx4fa7nAoQ75U41X8pRfizBJm-HL8Nhlte-aF44yLf-4z9y69eioss4IMjnaFCWsg=s32-p-k" /> </a>
+                    <a href="https://lh3.googleusercontent.com/Wu8HsQBppT51hwy2HuVpGsCehHYPQj3WrPS7MxbqpvALXyqUCZi2RwKiN3eemd_oVmBRjiYeQhkBzgNa1KGWs6bSY5U6iF7uM1LrwaB84gXxsMnjk75hUUli0jndvhpL9x8tBsiNqw=s32-p-k?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/Wu8HsQBppT51hwy2HuVpGsCehHYPQj3WrPS7MxbqpvALXyqUCZi2RwKiN3eemd_oVmBRjiYeQhkBzgNa1KGWs6bSY5U6iF7uM1LrwaB84gXxsMnjk75hUUli0jndvhpL9x8tBsiNqw=s32-p-k" /> </a>
+                    <a href="https://lh3.googleusercontent.com/4EfqAKXRz8zy-XBAH2GnVGvzNFEXdc5UtaALpUWm-WUE4teSyMXyyqangNCY529mXFz1UDxLCF5uXI33D57CiP8FQHYodAbjGfpsOTmFtiuttrGJG1PqUEpHc-GHGZJzcG0y79cGGQ=s32-p-k?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/4EfqAKXRz8zy-XBAH2GnVGvzNFEXdc5UtaALpUWm-WUE4teSyMXyyqangNCY529mXFz1UDxLCF5uXI33D57CiP8FQHYodAbjGfpsOTmFtiuttrGJG1PqUEpHc-GHGZJzcG0y79cGGQ=s32-p-k" /> </a>
+                </div>
+            </div>
+        </footer>
+</body>
+</html>

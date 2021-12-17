@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+        {% with messages = get_flashed_messages() %}     <!-- declare a variable called messages -->
+        {% if messages %}                            <!-- check if there are any messages -->
+            {% for message in messages %}            <!-- loop through the messages -->
+                <p>{{message}}</p>                   <!-- display each message in a paragraph tag -->
+            {% endfor %}
+        {% endif %}
+        {% endwith %}   
+
+        <div>
+            <h1>Edit {{products.name}}</h1>
+        <div>
+            
+            <a href="/products"><button type="button">Dashboard</button></a>
+            
+            <a href="/products/new"><button type="button">Add a Product</button></a>
+            
+            <a href="/logout"><button type="button"> Logout</button></a>
+        </div>
+
+            <div>
+                <form action="/products/{{products.id}}/update" , method="POST" >
+                
+                <p>Name: <input name="name" type="text" placeholder="{{products.name}}"  value="{{products.name}}"></p>
+                
+                <p>Item: <input name="item" type="text" placeholder="{{products.item}}"  value="{{products.item}}"></p>
+                
+                <p>description:</p>
+                <textarea name="description" id="description" cols="30" rows="10">{{products.description}}</textarea>
+                
+                    <div class="text-end">
+                        <button type="submit" >Update</button>
+                    <a href="/products/{{products.id}}/delete"><button type="button" > Delete</button></a>
+                    </div>
+                </form>
+            </div>
+    </div>
+    
+</body>
+</html>
