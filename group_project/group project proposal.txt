@@ -1,0 +1,21 @@
+PROJECT NAME : The Shop. 
+
+Group Participants : Raphael Khan, Juan Barrezeuta, Sadia Suhail, Erika Aguilar. 
+
+DESCRIPTION : AN eCommerce website with the below functionality built in
+
+. Login and registration has validation and allows for users to log in with email and password. 
+. Dashboard is the main page where all the products are listed. 
+. On the dashboard it will have buttons to edit, add a product, and log out. 
+. Edit will allow for users to edit a products, add will allow for users to update a product. 
+. And logout will clear session and log a user out. 
+. Show will allow the additional prdouct details to be displayed. 
+. Delete will delete a specfic product. 
+
+
+STERECH Goals. 
+
+. Adding a Many - Many relationhsip. 
+. Adding AN API for photos. 
+. An an embedded vidoe or music. 
+
